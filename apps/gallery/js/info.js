@@ -9,6 +9,7 @@ function showFileInformation(fileinfo) {
     req.onsuccess = function() {
       fileinfo.size = req.result.size;
       fileinfo.type = req.result.type || 'video/3gp';
+      fileinfo.name = req.result.name;
       populateMediaInfo(fileinfo);
     };
   } else {
